@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title description">
+  <title id="title">Illustrative BIM framework study</title>
+  <desc id="description">A conceptual architectural massing and coordination drawing, not a TSK Group project image.</desc>
+  <defs>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#171717" stroke-opacity=".07"/>
+    </pattern>
+    <linearGradient id="wash" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#eeece5"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="#F7F6F2"/>
+  <rect width="1600" height="1000" fill="url(#grid)"/>
+  <path d="M120 790H1480" stroke="#171717" stroke-opacity=".55"/>
+  <g fill="url(#wash)" stroke="#171717" stroke-width="2">
+    <path d="M270 640V390l185-92 185 92v250z"/>
+    <path d="M455 298l55-35 185 92-55 35z" fill="#DAD9D3"/>
+    <path d="M640 640V355l270-135 270 135v285z"/>
+    <path d="M910 220l68-40 270 135-68 40z" fill="#DAD9D3"/>
+    <path d="M1180 640V420l105-52 105 52v220z"/>
+    <path d="M1285 368l45-27 105 52-45 27z" fill="#DAD9D3"/>
+  </g>
+  <g fill="none" stroke="#777" stroke-width="2">
+    <path d="M270 432h370M270 482h370M270 532h370M270 582h370M270 640h370"/>
+    <path d="M640 406h540M640 456h540M640 506h540M640 556h540M640 606h540"/>
+    <path d="M345 390v250M420 315v325M495 318v322M570 353v287"/>
+    <path d="M720 315v325M800 275v365M880 235v405M960 245v395M1040 285v355M1120 325v315"/>
+    <path d="M1180 450h210M1180 500h210M1180 550h210M1180 600h210"/>
+  </g>
+  <g fill="none" stroke="#171717" stroke-opacity=".5" stroke-dasharray="8 9">
+    <path d="M170 220v560M640 180v600M1260 160v620"/>
+    <path d="M220 750l270-135M600 750l440-220M1080 750l220-110"/>
+  </g>
+  <g fill="#777" font-family="ui-monospace,monospace" font-size="18">
+    <text x="170" y="200">GRID A</text>
+    <text x="640" y="160">GRID B</text>
+    <text x="1260" y="140">GRID C</text>
+    <text x="120" y="850" letter-spacing="3">CONCEPTUAL BIM FRAMEWORK</text>
+    <text x="120" y="884" font-size="14" letter-spacing="2">ILLUSTRATIVE STUDY · NOT A CLIENT PROJECT IMAGE</text>
+  </g>
+</svg>
