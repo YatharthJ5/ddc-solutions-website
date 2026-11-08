@@ -5,7 +5,7 @@ import { SplitText } from "@/components/motion";
 import { ContactForm } from "@/components/contact-form";
 export const metadata: Metadata = { title: "Contact Us", description: "Contact DDC Solutions: 0208 058 5031, info@ddcsolutions.co.uk, 36 Scotts Road, Bromley, BR1 3QD." };
 export default function Contact() {
-  const configured = !!(process.env.RESEND_API_KEY && process.env.CONTACT_TO_EMAIL && process.env.CONTACT_FROM_EMAIL);
+  const configured = false;
   return (<div className="wrap grid gap-16 py-20 md:grid-cols-12 md:py-32">
     <div className="md:col-span-5"><Eyebrow>Contact Us</Eyebrow><SplitText as="h1" className="display text-[clamp(2.3rem,5vw,4rem)]" text="Let’s make your digital construction predictable." />
       <dl className="mt-12 divide-y divide-line border-y border-line text-lg">
