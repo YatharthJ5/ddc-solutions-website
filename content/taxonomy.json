@@ -1,0 +1,146 @@
+{
+ "categories": [
+  {
+   "slug": "bim",
+   "name": "BIM",
+   "count": 104
+  },
+  {
+   "slug": "construction",
+   "name": "Construction",
+   "count": 18
+  },
+  {
+   "slug": "uncategorized",
+   "name": "Uncategorized",
+   "count": 3
+  }
+ ],
+ "tags": [
+  {
+   "slug": "4d-bim",
+   "name": "4D BIM",
+   "count": 1
+  },
+  {
+   "slug": "bim",
+   "name": "BIM",
+   "count": 2
+  },
+  {
+   "slug": "bim-governance",
+   "name": "BIM governance",
+   "count": 1
+  },
+  {
+   "slug": "bim-implementation",
+   "name": "Bim implementation",
+   "count": 1
+  },
+  {
+   "slug": "bim-implementation-plan",
+   "name": "BIM implementation plan",
+   "count": 1
+  },
+  {
+   "slug": "bim-modeling-software",
+   "name": "bim modeling software",
+   "count": 1
+  },
+  {
+   "slug": "bim-software",
+   "name": "bim software",
+   "count": 1
+  },
+  {
+   "slug": "bim-software-list",
+   "name": "bim software list",
+   "count": 1
+  },
+  {
+   "slug": "bim-softwares",
+   "name": "bim softwares",
+   "count": 1
+  },
+  {
+   "slug": "bim-systems",
+   "name": "bim systems",
+   "count": 1
+  },
+  {
+   "slug": "bim-tools",
+   "name": "bim tools",
+   "count": 1
+  },
+  {
+   "slug": "cde",
+   "name": "CDE",
+   "count": 1
+  },
+  {
+   "slug": "clash-detection",
+   "name": "clash detection",
+   "count": 1
+  },
+  {
+   "slug": "clash-detection-best-practices",
+   "name": "clash detection best practices",
+   "count": 1
+  },
+  {
+   "slug": "common-data-environment",
+   "name": "common data environment",
+   "count": 1
+  },
+  {
+   "slug": "construction-collaboration",
+   "name": "construction collaboration",
+   "count": 1
+  },
+  {
+   "slug": "construction-quoting-risk",
+   "name": "construction quoting risk",
+   "count": 1
+  },
+  {
+   "slug": "digital-transformation",
+   "name": "digital transformation",
+   "count": 1
+  },
+  {
+   "slug": "information-management",
+   "name": "information management",
+   "count": 1
+  },
+  {
+   "slug": "iso-19650",
+   "name": "ISO 19650",
+   "count": 2
+  },
+  {
+   "slug": "point-cloud-modeling",
+   "name": "Point Cloud Modeling",
+   "count": 3
+  },
+  {
+   "slug": "project-pricing",
+   "name": "project pricing",
+   "count": 1
+  },
+  {
+   "slug": "revit",
+   "name": "Revit",
+   "count": 1
+  },
+  {
+   "slug": "scan-to-bim",
+   "name": "Scan to BIM",
+   "count": 5
+  },
+  {
+   "slug": "scope-definition",
+   "name": "scope definition",
+   "count": 1
+  }
+ ]
+}

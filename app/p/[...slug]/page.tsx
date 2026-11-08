@@ -6,8 +6,10 @@ import { Eyebrow, Photo, Prose, CTA } from "@/components/ui";
 
 export const dynamicParams = false;
 
-export function generateStaticParams() {
-  return genericPages().map((page) => ({
+export async function generateStaticParams() {
+  const pages = genericPages();
+
+  return pages.map((page) => ({
     slug: page.slug.split("/"),
   }));
 }
