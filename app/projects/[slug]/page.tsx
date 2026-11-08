@@ -11,11 +11,11 @@ export const generateStaticParams = () => projects.map(p => ({ slug: p.slug }));
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> { const { slug } = await params; const p = projects.find(x => x.slug === slug); return p ? { title: `${p.client} case study`, description: p.body.slice(0, 155) } : {}; }
 export default async function Project({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params; const i = projects.findIndex(x => x.slug === slug); if (i < 0) notFound();
-  const p = projects[i], pg = getPage(p.src), others = projects.filter(x => x.slug !== slug).slice(0, 3), t = p.quote !== undefined ? testimonials[p.quote] : null, gallery = [...(pg?.images ?? []).slice(1), ...(p.gallery ?? [])];
+  const p = projects[i], pg = getPage(p.src), others = projects.filter(x => x.slug !== slug).slice(0, 3), t = p.quote !== undefined ? testimonials[p.quote] : null, gallery = p.gallery ?? [];
   const facts: [string, string][] = [["Client", p.client], ["Sector", p.sector], ...(p.place ? [["Location", p.place] as [string, string]] : []), ...(p.services ? [["Services", p.services] as [string, string]] : [])];
   return (<>
     <section className="wrap pt-14 md:pt-24"><Eyebrow>Case study</Eyebrow><SplitText as="h1" className="display max-w-5xl text-[clamp(2.2rem,5vw,4.6rem)]" text={p.title} /></section>
-    <div className="wrap mt-12"><ProjectPhoto src={pg?.images?.[0] ?? pg?.featured ?? p.image} alt={p.illustrative ? `Illustrative BIM visual for ${p.client}, not project photography` : `${p.client} project`} illustrative={p.illustrative} ratio="aspect-[16/9] md:aspect-[21/9]" priority sizes="100vw" /></div>
+    <div className="wrap mt-12"><ProjectPhoto src={p.image} alt={p.illustrative ? `Illustrative BIM visual for ${p.client}, not project photography` : `${p.client} project`} illustrative={p.illustrative} ratio="aspect-[16/9] md:aspect-[21/9]" priority sizes="100vw" /></div>
     <section className="wrap grid gap-12 py-20 md:grid-cols-12 md:py-28">
       <dl className="md:col-span-4">{facts.map(([k, v]) => <div key={k} className="border-t border-line py-4"><dt className="text-sm text-stone">{k}</dt><dd className="mt-1 text-lg">{v}</dd></div>)}</dl>
       <div className="md:col-span-7 md:col-start-6"><h2 className="eyebrow">Overview</h2><Reveal><p className="display text-2xl leading-snug md:text-3xl">{p.body}</p></Reveal>

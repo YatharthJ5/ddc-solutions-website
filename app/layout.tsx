@@ -5,12 +5,13 @@ import { Footer } from "@/components/footer";
 import { Motion } from "@/components/motion";
 import { contact, socials } from "@/lib/data";
 import { brand } from "@/lib/assets";
+import { withBasePath } from "@/lib/paths";
 const site = process.env.NEXT_PUBLIC_SITE_URL || "https://ddcsolutions.co.uk";
 export const metadata: Metadata = {
   metadataBase: new URL(site),
   title: { default: "Top BIM Consultants in UK - DDC Solutions", template: "%s | DDC Solutions" },
   description: "Bespoke BIM consultancy and dedicated modeling support tailored for UK firms. We work as part of your team to reduce overheads, remove technical bottlenecks and keep your pipeline moving.",
-  icons: { icon: brand.favicon },
+  icons: { icon: withBasePath(brand.favicon) },
   openGraph: { siteName: "DDC Solutions", type: "website", locale: "en_GB", images: ["https://ddcsolutions.co.uk/wp-content/uploads/2026/08/49.png"] },
   twitter: { card: "summary_large_image" },
 };

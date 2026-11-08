@@ -11,8 +11,8 @@ import { PostLink } from "@/components/post-link";
 import { AchievementsPreview } from "@/components/achievements";
 import { services, projects, whyUs, testimonials, logos, team } from "@/lib/data";
 import { img, HERO, APPROACH } from "@/lib/assets";
-import { getPage, allPosts, fmtDate } from "@/lib/content";
-const pimg = (src?: string, fallback?: string) => { const p = getPage(src); return p?.images?.[0] ?? p?.featured ?? fallback ?? null; };
+import { withBasePath } from "@/lib/paths";
+import { allPosts, fmtDate } from "@/lib/content";
 export default function Home() {
   const posts = allPosts().slice(0, 4), [f, ...rest] = posts;
   return (<>
@@ -25,7 +25,7 @@ export default function Home() {
 
     <section className="border-y border-line bg-paper2"><div className="wrap grid items-center gap-8 py-12 md:grid-cols-12">
       <p className="md:col-span-3 text-sm text-stone">Trusted by industry leaders</p>
-      <ul className="flex flex-wrap items-center gap-x-14 gap-y-6 md:col-span-9">{logos.map(([l, n]) => <li key={l}><img src={img(l)} alt={n} loading="lazy" className="h-9 w-auto opacity-70 grayscale" /></li>)}</ul></div></section>
+      <ul className="flex flex-wrap items-center gap-x-14 gap-y-6 md:col-span-9">{logos.map(([l, n]) => <li key={l}><img src={withBasePath(img(l))} alt={n} loading="lazy" className="h-9 w-auto opacity-70 grayscale" /></li>)}</ul></div></section>
 
     <section className="wrap grid gap-12 py-24 md:grid-cols-12 md:py-36">
       <div className="md:col-span-7"><Eyebrow>Who we are</Eyebrow>
@@ -43,7 +43,7 @@ export default function Home() {
 
     <ClashDetection />
 
-    <ProjectStory items={projects.map(p => ({ slug: p.slug, client: p.client, title: p.title, sector: p.sector, place: p.place, body: p.body, image: pimg(p.src, p.image) ?? null, illustrative: p.illustrative }))} />
+    <ProjectStory items={projects.map(p => ({ slug: p.slug, client: p.client, title: p.title, sector: p.sector, place: p.place, body: p.body, image: p.image ?? null, illustrative: p.illustrative }))} />
 
     <AchievementsPreview />
 
