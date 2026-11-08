@@ -1,6 +1,7 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import Link from "next/link";
 import { Reveal } from "@/components/motion";
+import { withBasePath } from "@/lib/paths";
 
 const aboutMarks = [
   {
@@ -8,8 +9,8 @@ const aboutMarks = [
     width: 457,
     height: 85,
     alt: "Elite Business 100 Top SME Businesses 2022, winner of Rising Star of the Year Award",
-    title: "Elite Business 100 · Top SME 2022",
-    detail: "Winner · Rising Star of the Year Award",
+    title: "Elite Business 100 Â· Top SME 2022",
+    detail: "Winner Â· Rising Star of the Year Award",
   },
   {
     src: "/images/achievements/safe-supplier.png",
@@ -27,8 +28,8 @@ const caseStudyMarks = [
     width: 1515,
     height: 280,
     alt: "Elite Business 100 Top SME Businesses 2024, winner of Rising Star of the Year Award",
-    title: "Elite Business 100 · Top SME 2024",
-    detail: "Winner · Rising Star of the Year Award",
+    title: "Elite Business 100 Â· Top SME 2024",
+    detail: "Winner Â· Rising Star of the Year Award",
   },
   {
     src: "/images/achievements/safe-supplier-badge.png",
@@ -49,7 +50,7 @@ function Marks({ compact = false, caseStudy = false }: { compact?: boolean; case
           <Reveal delay={i * 0.08} className={`h-full border border-line bg-paper2 ${compact ? "p-4 md:p-5" : "p-6 md:p-9"}`}>
             <div className={`flex h-full flex-col justify-between ${compact ? "gap-3" : "gap-6"}`}>
               <Image
-                src={mark.src}
+                src={withBasePath(mark.src)}
                 alt={mark.alt}
                 width={mark.width}
                 height={mark.height}
@@ -105,7 +106,7 @@ export function AchievementsPreview() {
         <div className="md:col-span-4">
           <p className="eyebrow">Recognition</p>
           <h2 id="achievements-preview" className="display text-3xl md:text-4xl">Our Achievements</h2>
-          <Link href="/about" className="link-u mt-4 inline-block text-sm">Discover more about DDC →</Link>
+          <Link href="/about" className="link-u mt-4 inline-block text-sm">Discover more about DDC â†’</Link>
         </div>
         <div className="md:col-span-7 md:col-start-6">
           <Marks compact />
@@ -114,3 +115,5 @@ export function AchievementsPreview() {
     </section>
   );
 }
+
+
